@@ -1,0 +1,294 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: rgb(253, 245, 245);
+    height: 10vh;
+    width: 100vw;
+}
+
+header button {
+    height: 8vh;
+    width: 15vw;
+    margin-left: 1vw;
+    border: none;
+    font-size: 2em;
+    background-color: rgb(204, 51, 85);
+    color: white
+}
+
+.clock-button {
+    margin-left: 5vw;
+    background-color: rgb(156, 35, 61);
+}
+
+header button:hover {
+    cursor: pointer;
+    background-color: #da5f79;
+}
+
+.clock {
+    background-color: rgb(253, 245, 245);
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11em;
+    font-weight: bolder;
+    font-family: arial, monospace;
+    position: fixed;
+    top: 10vh;
+    visibility:visible;
+}
+
+.timer {
+    background-color: rgb(33, 32, 32);
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 11em;
+    font-weight: bolder;
+    font-family: arial, monospace;
+    color: white;
+    position: fixed;
+    top: 10vh;
+    visibility: hidden;
+}
+.timer-show {
+    text-align: center;
+    grid-column: 1/4
+}
+.timer-show:hover {
+    cursor: pointer;
+    color: #CC3355
+    
+}
+.timer button {
+    background-color: #CC3355;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    border: none;
+    font-size: 10vh;
+    color: white;
+    margin-right: 20px;
+}
+
+.timer button:hover {
+    cursor: pointer;
+    font-size: 11vh;
+}
+
+#reset-button {
+    background-color: rgb(253, 245, 245);
+    color: rgb(33, 32, 32);
+    margin: 0px;
+}
+
+.timerSetter{
+    background-color: rgb(253, 245, 245);
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11em;
+    font-weight: bolder;
+    font-family: arial, monospace;
+    position:absolute;
+    top: 15vh;
+    left: 10vw;
+    visibility: hidden;
+}
+
+.timerSetter input {
+    height: 20%;
+    width: 100px;
+    text-align: center;
+    font-size: 0.3em;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(222, 217, 217);
+    border: none;
+}
+
+.timerSetter button {
+    height: 23%;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.3em;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(232, 187, 187);
+    border: none;
+    color: white;
+}
+
+.timerSetter button:hover {
+    cursor: pointer;
+    background-color: rgb(239, 153, 153);
+}
+
+.prayerTime {
+    background-color: rgba(234,235,230,255);
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-weight: bolder;
+    font-family: arial, monospace; 
+    background-image: url("mosqueImg.jpeg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center right;
+    position: fixed;
+    top: 10vh;
+    visibility: hidden;
+}
+.prayerTimeShow div {
+    background-color: rgb(33, 32, 32);
+    color: white;
+    font-size: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prayerTimeShow {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70% 30%;
+    grid-column-gap: 20px;
+    height: 30vh;
+}
+
+.fetchDiv {
+    padding-top: 10px;
+    width: 50vw;
+    height: 7vh;
+}
+
+.fetchDiv input {
+    width: 80%;
+    height: 100%;
+    font-size: 2em;
+    border: none;
+    border-bottom: 2px solid rgb(33, 32, 32);
+    background-color: rgba(234,235,230,255);
+    margin-left: 5px;
+    background-color: transparent;
+}
+
+.fetchDiv button {
+    height: 100%;
+    width: 18%;
+    border: none;
+    background-color: rgb(33, 32, 32);
+    color: rgb(253, 245, 245);
+    font-size: 2em;
+}
+
+.prayer-time-showcase {
+    background-color: rgba(104, 109, 104, 0.764);
+}
+
+@media (max-width: 1050px) {
+    .prayerTime {
+        display: flex;
+        flex-direction:row-reverse;
+        
+    }
+
+    .prayerTimeShow {
+        display: grid;
+        grid-template-columns: repeat(2, 25vw);
+        grid-template-rows: repeat(5, 18vh);
+        grid-column-gap: 0px;
+    }
+
+    .prayer-time-showcase {
+        grid-column: 1/2;
+    }
+    #fajr-mark {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+    }
+    #dhuhr-mark {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+    }
+    #asr-mark {
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+    }
+    #magrib-mark {
+        grid-column: 2/3;
+        grid-row: 4/5;
+
+    }
+    #fajr-mark {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+    }
+
+    .fetchDiv {
+        display: grid;
+        justify-content: left;
+        grid-template-columns: 40vw;
+        grid-template-rows: 10vh 10vh;
+    }
+
+    .fetchDiv button, .fetchDiv input {
+        font-size: 20px;
+        width: 100%;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header button {
+        margin: 0vw;
+        width: 30vw;
+        font-size: 20px;
+    }
+    .clock-button {
+        margin: 0px;
+    }
+
+    .timer button{
+        height: 100px;
+        width: 100px;
+        font-size: 20px;
+    }
+
+    .timer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+
+    .timer-show {
+        grid-column: 1/-1;
+        font-size: 20vw;
+    }
+
+    .clock {
+        font-size: 15vw;
+    }
+    
+}

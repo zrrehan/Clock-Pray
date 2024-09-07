@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <header>
+        <button class="clock-button">Clock</button>
+        <button class="timer-button">Timer</button>
+        <button class="prayerTime-button">Prayer Time</button>
+    </header>
+    <div class="clock">11:11:11 am</div>
+    <div class="timer">
+            <div class = "timer-show">00:00:00</div> 
+            <button id = "start-button">Start</button>
+            <button id = "reset-button">Reset</button>
+    </div>
+    <div class="prayerTime">
+        <div class="prayerTimeShow">
+            <div class = "prayer-time-showcase" id = "fajr">- - : - -</div>
+            <div class = "prayer-time-showcase" id = "dhuhr">- - : - -</div>
+            <div class = "prayer-time-showcase" id = "asr">- - : - -</div>
+            <div class = "prayer-time-showcase" id = "magrib">- - : - -</div>
+            <div class = "prayer-time-showcase" id = "isha">- - : - -</div>
+            <div id = "fajr-mark">Fajr</div>
+            <div id = "dhuhr-mark">Dhuhr</div>
+            <div id = "asr-mark">Asr</div>
+            <div id = "magrib-mark">Magrib</div>
+            <div id = "isha-mark">Isha</div>
+        </div>
+        <div class = "fetchDiv">
+            <input id = "location" type = "text" placeholder="City, Country">
+            <button id = "fetch">Fetch</button>
+        </div>
+    </div>
+    <div class="timerSetter">
+        <input id = "hr" type = "number" placeholder = "hr">
+        <input id = "min" type = "number" placeholder = "min">
+        <input id = "sec" type = "number" placeholder = "sec">
+        <button id = "setButton">Set</button>
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>
